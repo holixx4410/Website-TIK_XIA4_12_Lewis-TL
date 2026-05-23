@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background-color: #f6f8fa;
+    color: #24292f;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.workbench-container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.engineer-hero {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 35px;
+    border: 1px solid #d0d7de;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.hero-left-side {
+    display: flex;
+    align-items: center;
+    gap: 28px; 
+}
+
+.profile-photo-box {
+    width: 110px;          
+    height: 110px;         
+    border-radius: 50%;   
+    overflow: hidden;      
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #0f2c59; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background-color: #f0f4f8; 
+    flex-shrink: 0;   
+}
+
+.profile-photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     
+    object-position: center top;
+    z-index: 2;
+}
+
+.photo-fallback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0f2c59;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.meta-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #ef4444;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.engineer-hero h1 {
+    font-size: 2.1rem;
+    color: #0f2c59;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.headline {
+    font-size: 1.05rem;
+    color: #57606a;
+    margin: 4px 0 10px 0;
+    font-weight: 500;
+}
+
+.school-text {
+    font-size: 0.88rem;
+    color: #8c959f;
+    margin-bottom: 15px;
+}
+
+.btn-action-primary {
+    background-color: #0f2c59;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-action-primary:hover {
+    background-color: #1e40af;
+}
+
+.hidden-panel {
+    display: none;
+    margin-top: 15px;
+    padding: 10px;
+    background: #f6f8fa;
+    border-left: 3px solid #ef4444;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.hero-quick-spec {
+    background-color: #f6f8fa;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.spec-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.spec-label {
+    font-size: 0.65rem;
+    color: #57606a;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.spec-value {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #24292f;
+}
+
+.workspace-main {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.workbench-card {
+    background: #ffffff;
+    border: 1px solid #d0d7de;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.workbench-card h2, .section-heading {
+    font-size: 1.25rem;
+    color: #0f2c59;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #484f58;
+    margin-bottom: 12px;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.report-table th, .report-table td {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #d8dee4;
+    text-align: left;
+}
+
+.report-table th {
+    color: #57606a;
+    font-weight: 600;
+}
+
+.text-right { text-align: right !important; }
+
+.mark-box {
+    background: #eaeef2;
+    color: #24292f;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.mark-box.top-mark {
+    background: #dafbe1;
+    color: #1a7f37;
+}
+
+.projects {
+    margin-top: 10px;
+}
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background: #ffffff;
+    border: 1px solid #d0d7de;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+    border-left: 4px solid #0f2c59;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    border-left-color: #ef4444;
+}
+
+.project-tag-mini {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #8c959f;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.project-card h3 {
+    font-size: 1.1rem;
+    color: #24292f;
+    margin-bottom: 6px;
+}
+
+.project-card p {
+    font-size: 0.8rem;
+    color: #57606a;
+    line-height: 1.5;
+}
+
+.project-card a {
+    display: inline-block;
+    background-color: #f6f8fa;
+    color: #0f2c59;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid #d0d7de;
+    margin-top: 15px;
+    transition: all 0.2s;
+}
+
+.project-card a:hover {
+    background-color: #0f2c59;
+    color: white;
+    border-color: transparent;
+}
+
+.workbench-footer {
+    background: #ffffff;
+    border-top: 1px solid #d0d7de;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+    color: #57606a;
+    font-weight: 500;
+}
+
+@media (max-width: 850px) {
+    .hero-left-side { flex-direction: column; text-align: center; }
+    .engineer-hero { flex-direction: column; align-items: stretch; }
+    .workspace-main, .project-container { grid-template-columns: 1fr; }
+}
